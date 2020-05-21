@@ -3,19 +3,21 @@ package main.java.sorting;
 import java.time.Duration;
 import java.time.Instant;
 import java.util.function.Consumer;
+import java.util.function.IntConsumer;
+import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 public class MergeSort {
     public static void main(String[] args) {
-        Integer[] array = {8, 5, 2, 4, 1, 9, 6, 45, 56, 23, 12, 34, 90, 78, 67, 43, 3, 35, 435345, 434, 4656, 323, 68,
+        int[] array = {8, 5, 2, 4, 1, 9, 6, 45, 56, 23, 12, 34, 90, 78, 67, 43, 3, 35, 435345, 434, 4656, 323, 68,
                 22, 808, 42, 77978, 41, 21, 25, 18, 454, 657, 494, 8789, 459, 324, 5464, 232436, 91};
         sort(array);
     }
 
-    public static void sort(Integer[] array) {
-        Consumer<Integer> print = i -> System.out.print(i + " ");
+    public static void sort(int[] array) {
+        IntConsumer print = i -> System.out.print(i + " ");
         System.out.print("Input  : ");
-        Stream.of(array).forEach(print);
+        IntStream.of(array).forEach(print);
 
         Instant start = Instant.now();
 
@@ -24,11 +26,11 @@ public class MergeSort {
         Instant end = Instant.now();
 
         System.out.print("\nOutput : ");
-        Stream.of(array).forEach(print);
+        IntStream.of(array).forEach(print);
         System.out.println("\nTime Elapsed (Milliseconds) : " + Duration.between(start, end).toMillis());
     }
 
-    private static void mergeSort(Integer[] array, int left, int right) {
+    private static void mergeSort(int[] array, int left, int right) {
         if (left >= right) {
             return;
         }
@@ -38,7 +40,7 @@ public class MergeSort {
         merge(array, left, mid, right);
     }
 
-    private static void merge(Integer[] array, int left, int mid, int right) {
+    private static void merge(int[] array, int left, int mid, int right) {
         int n1 = mid - left + 1;
         int n2 = right - mid;
 
