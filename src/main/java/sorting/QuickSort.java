@@ -31,9 +31,7 @@ public class QuickSort {
     }
 
     private static void quickSort(Integer[] array, int low, int high) {
-
         if(low>=high) return;
-        
         int pivot = partition(array, low, high);
         quickSort(array, low, pivot-1);
         quickSort(array, pivot+1, high);
