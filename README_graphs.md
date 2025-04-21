@@ -22,7 +22,16 @@ Applications:
 Types of Graph:
 1. Regular graph - A simple graph where every vertex have same degree. Formula to calculate no of edges -> (n*d)/2
 2. Complete graph - A simple graph where every vertes is adjacent to every other vertex.
-   Formula to calculate no of edges -> nC2 = (n*(n-1))/2, where n is no of vertex and n-1 is degree of a vertex.
+   Formula to calculate no of edges -> nC2 = (n*(n-1))/2, where n is no of vertex and n-1 is degree of a vertex  
+3. Eulerian Graph - A graph in which both eulerian path and eularian cycle is present.
+   1. Eulerian path - starting from a vertex and cover all edges and ends in other vertex.
+   2. Eulerian cycle - starting from a vertex and cover all edges and ends in the same vertex.
 
 Q. How many simple graph are possible to draw if no of vertex is n.
 Ans: Formula = 2^E, where E = no of edges = nC2
+
+
+Representation of graph in programming:
+1. Adjacency List - e.g. {v1=[v2, v3, v4], v2=[v1, v4}], v3=[v1], v4=[v1, v3]}
+2. Adjacency Matrix - n* n matrix, consists of 1 and 0. where n is no of vertices
+   e.g. [n][n] where for the adjacent vertices, put 1 otherwise 0.
