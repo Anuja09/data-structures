@@ -17,10 +17,11 @@ Applications:
 Knapsack means bag and bag have some capacity. 
 e.g. A bag having capacity of 20kg. And, I have to find maximum profit with maximum items that can fit in 20kg.
    Lets say we have input objects having profit and weight: obj1={25, 18}, obj2={24,15}, Obj3={15,10}.
-    1. Greedy about profit (maximum profit first, then second max profit and so on). Then, max profit = 25 + ((2/15) * 24) = 28.5
-    2. Greedy about weight (minimum weight first, then seond minimum weight and so on). Then, max profit = 15 + ((10/15)* 24) = 31
-    3. Greedy about both (based on p/w ratio = maximum first, and so on) = 24 + ((5/10) * 15) = 31.5
-    So, 31.5 is the answer.
+   1. Greedy about profit (maximum profit first, then second max profit and so on). Then, max profit = 25 + ((2/15) * 24) = 28.5
+   2. Greedy about weight (minimum weight first, then seond minimum weight and so on). Then, max profit = 15 + ((10/15)* 24) = 31
+   3. Greedy about both (based on p/w ratio = maximum first, and so on) = 24 + ((5/10) * 15) = 31.5
+   
+   So, 31.5 is the answer.
 
 pseudo code:
 ```
