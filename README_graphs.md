@@ -23,4 +23,6 @@ Types of Graph:
 1. Regular graph - A simple graph where every vertex have same degree. Formula to calculate no of edges -> (n*d)/2
 2. Complete graph - A simple graph where every vertes is adjacent to every other vertex.
    Formula to calculate no of edges -> nC2 = (n*(n-1))/2, where n is no of vertex and n-1 is degree of a vertex.
-    
+
+Q. How many simple graph are possible to draw if no of vertex is n.
+Ans: Formula = 2^E, where E = no of edges = nC2
