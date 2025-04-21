@@ -39,3 +39,22 @@ pseudo code:
         P = P + (p[i] * (M/w[i]))
 ```
 TC = O(n) + O(nlogn) + O(n) ==> O(nlong)
+
+### Optimal merge pattern:
+It is to find optimal solution of merging.
+E.g. I have files f1, f2, f3 with lines 10, 20, 30 respectively. I have to find no if minimum movements to merge all files, provided that you can merge only two files at a time.
+   1. Solution 1 -> merge f2 and f3 first and then, merge it with f1. Total movements = (10 * 1 + 20 * 2 + 30 * 2) = 110 movemnets
+   2. Solution 2 -> merge f1 and f3 first and then, merge it with f2. Total movements = (20 * 1 + 10 * 2 + 30 * 2) = 100 movemnets
+   3. Solution 3 -> merge f1 and f2 first and then, merge it with f3. Total movements = (30 * 1 + 10 * 2 + 20 * 2) = 90 movemnets
+   So, 90 is optimal answer.
+
+pseudo code:
+```
+1. create min heap with 'n' files - (use heapify or manual)
+2. at each level,
+   1. remove first file with minimum lines
+   2. remove second file with minimum lines
+   2. put result back into heap
+```
+TC = O(n) + O(nlogn) ==> O(nlong)   
+
