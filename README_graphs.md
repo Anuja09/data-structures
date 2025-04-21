@@ -35,3 +35,21 @@ Representation of graph in programming:
 1. Adjacency List - e.g. {v1=[v2, v3, v4], v2=[v1, v4}], v3=[v1], v4=[v1, v3]}
 2. Adjacency Matrix - n* n matrix, consists of 1 and 0. where n is no of vertices
    e.g. [n][n] where for the adjacent vertices, put 1 otherwise 0.
+3. Class representing graph -
+   class Node {
+    public int val;
+    public List<Node> neighbors;
+    public Node() {
+        val = 0;
+        neighbors = new ArrayList<Node>();
+    }
+    public Node(int _val) {
+        val = _val;
+        neighbors = new ArrayList<Node>();
+    }
+    public Node(int _val, ArrayList<Node> _neighbors) {
+        val = _val;
+        neighbors = _neighbors;
+    }
+  }
+
